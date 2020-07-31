@@ -1,0 +1,30 @@
+import source.core as core
+
+operations = {
+    0: "Byeeeee!\n",
+    1: core.init_players_get_entries,
+    2: core.init_players_get_account_info,
+    3: core.init_players_merge_with,
+    4: core.init_players_get_match_history,
+    5: core.init_get_matches_data,
+}
+
+while True:
+    print("""
+    Select an operation:
+
+    0. Exit
+    1. Get Players Pool
+    2. Get Players Account id
+    3. Merge Accounts id and Players Pool
+    4. Get Players Match History
+    5. Get Complete Matches Data
+
+    """)
+    option = int(input("What do you want to do?: "))
+
+    if option != 0:
+        operations[option]()
+    else:
+        print(operations[option])
+        break
